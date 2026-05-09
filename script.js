@@ -64,14 +64,16 @@ navLinks.forEach(link => {
     });
 });
 
-// Navbar scroll effect
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(26, 26, 26, 0.98)';
-    } else {
-        navbar.style.background = 'rgba(26, 26, 26, 0.95)';
-    }
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(0, 0, 0, 0.85)';
+            } else {
+                navbar.style.background = 'rgba(0, 0, 0, 0.7)';
+            }
+        }
 
     // Update scroll progress
     if (scrollProgressBar) {
@@ -157,10 +159,12 @@ const initScrollProgress = () => {
     // Update navbar on scroll
     window.addEventListener('scroll', () => {
         const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 100) {
-            navbar.style.background = 'rgba(26, 26, 26, 0.98)';
-        } else {
-            navbar.style.background = 'rgba(26, 26, 26, 0.95)';
+        if (navbar) {
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(0, 0, 0, 0.85)';
+            } else {
+                navbar.style.background = 'rgba(0, 0, 0, 0.7)';
+            }
         }
     });
 };
